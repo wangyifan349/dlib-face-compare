@@ -1,5 +1,7 @@
 # dlib-face-compare
 
+> English · [中文文档](README.zh.md)
+
 > Face comparison and 1:N retrieval powered by **dlib**: give it two images to tell whether they show the same person, or give it one image plus a folder to rank every image in that folder by similarity.
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white)
@@ -174,7 +176,8 @@ In a real deployment, tune this value against your own positive and negative pai
 ```text
 dlib-face-compare/
 ├── face_compare.py              # main program, single file
-├── README.md
+├── README.md                    # English documentation
+├── README.zh.md                 # Chinese documentation
 ├── models/
 │   ├── dlib_face_recognition_resnet_model_v1.dat
 │   ├── shape_predictor_5_face_landmarks.dat
