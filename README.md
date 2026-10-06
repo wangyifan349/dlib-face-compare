@@ -1,4 +1,4 @@
-# 项目
+# dlib-face-compare
 
 > Face comparison and 1:N retrieval powered by **dlib**: give it two images to tell whether they show the same person, or give it one image plus a folder to rank every image in that folder by similarity.
 
@@ -67,12 +67,11 @@ Official Microsoft documentation (workload and component details):
 ## 2. Get the project and install dependencies
 
 ```bash
-git clone https://github.com/wangyifan349/%E9%A1%B9%E7%9B%AE.git
-cd 项目
+git clone https://github.com/wangyifan349/dlib-face-compare.git
+cd dlib-face-compare
 ```
 
-> `%E9%A1%B9%E7%9B%AE` is the URL encoding of `项目`, which is identical to
-> `https://github.com/wangyifan349/项目`.
+> The repository on GitHub is named `dlib-face-compare`.
 
 Install dlib (the first build takes **5–15 minutes**, longer on slower machines):
 
@@ -173,7 +172,7 @@ In a real deployment, tune this value against your own positive and negative pai
 ## 7. Project structure
 
 ```text
-项目/
+dlib-face-compare/
 ├── face_compare.py              # main program, single file
 ├── README.md
 ├── models/
