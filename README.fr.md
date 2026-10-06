@@ -220,6 +220,11 @@ HOG ne requiert aucun fichier de poids et est rapide, suffisant pour les portrai
 
 ---
 
-## License
+## Remerciements
 
-MIT
+- [dlib](https://github.com/davisking/dlib), par Davis King — pour le détecteur de visages HOG/CNN, le prédicteur de points de repère à 5 points et le modèle de reconnaissance ResNet.
+- La communauté open source — pour ses nombreux outils et ressources gratuits qui ont rendu ce projet possible.
+
+## Licence
+
+Ce projet est sous licence **MIT**. En résumé : vous pouvez librement utiliser, copier, modifier, fusionner, publier, distribuer et même vendre ce logiciel, à condition de conserver la mention de copyright originale et cet avis de permission. Le logiciel est fourni « tel quel », sans aucune garantie.

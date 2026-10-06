@@ -220,6 +220,11 @@ HOG braucht keine Gewichtsdatei und ist schnell, für Porträts und Passfotos is
 
 ---
 
-## License
+## Danksagung
 
-MIT
+- [dlib](https://github.com/davisking/dlib) von Davis King — für den HOG/CNN-Gesichtsdetektor, den 5-Punkt-Landmarken-Prädiktor und das ResNet-Erkennungsmodell.
+- Die Open-Source-Community — für die vielen kostenlosen Werkzeuge und Ressourcen, die dieses Projekt ermöglicht haben.
+
+## Lizenz
+
+Dieses Projekt steht unter der **MIT-Lizenz**. Kurz gesagt: Sie dürfen diese Software frei verwenden, kopieren, ändern, zusammenführen, veröffentlichen, verbreiten und sogar verkaufen, solange Sie den ursprünglichen Copyright-Hinweis und diesen Erlaubnisteil beibehalten. Die Software wird "wie sie ist" bereitgestellt, ohne jegliche Gewährleistung.

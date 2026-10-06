@@ -222,6 +222,11 @@ HOG needs no weight file and is fast, which is enough for portraits and ID photo
 
 ---
 
+## Acknowledgements
+
+- [dlib](https://github.com/davisking/dlib) by Davis King — for the HOG/CNN face detector, the 5-point landmark predictor and the ResNet recognition model.
+- The open-source community, whose free tools and resources made this project possible.
+
 ## License
 
-MIT
+This project is licensed under the **MIT License**. In short, you may freely use, copy, modify, merge, publish, distribute and even sell this software, as long as you keep the original copyright notice and this permission notice. The software is provided "as is", without any warranty.
