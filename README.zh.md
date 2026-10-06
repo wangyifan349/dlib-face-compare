@@ -1,6 +1,6 @@
 # dlib-face-compare
 
-> [English](README.md) · 中文文档
+> [English](README.md) · 中文文档 · [한국어](README.ko.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
 
 > 用 **dlib** 做人脸对比与 1:N 检索：给两张图判断是不是同一个人，或给一张图加一个目录，把目录里的图片按相似度从高到低排好序。
 
@@ -176,6 +176,10 @@ dlib-face-compare/
 ├── face_compare.py              # 主程序，单文件
 ├── README.md                    # 英文文档
 ├── README.zh.md                 # 中文文档
+├── README.ko.md                 # 韩文文档
+├── README.ja.md                 # 日文文档
+├── README.fr.md                 # 法语文档
+├── README.de.md                 # 德语文档
 ├── models/
 │   ├── dlib_face_recognition_resnet_model_v1.dat
 │   ├── shape_predictor_5_face_landmarks.dat

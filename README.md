@@ -1,6 +1,6 @@
 # dlib-face-compare
 
-> English · [中文文档](README.zh.md)
+> English · [中文文档](README.zh.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [Français](README.fr.md) · [Deutsch](README.de.md)
 
 > Face comparison and 1:N retrieval powered by **dlib**: give it two images to tell whether they show the same person, or give it one image plus a folder to rank every image in that folder by similarity.
 
@@ -178,6 +178,10 @@ dlib-face-compare/
 ├── face_compare.py              # main program, single file
 ├── README.md                    # English documentation
 ├── README.zh.md                 # Chinese documentation
+├── README.ko.md                 # Korean documentation
+├── README.ja.md                 # Japanese documentation
+├── README.fr.md                 # French documentation
+├── README.de.md                 # German documentation
 ├── models/
 │   ├── dlib_face_recognition_resnet_model_v1.dat
 │   ├── shape_predictor_5_face_landmarks.dat
