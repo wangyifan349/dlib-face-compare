@@ -163,3 +163,5 @@ elif second_is_directory:
     run_search(first_argument, second_argument)  # image + directory
 else:
     run_search(second_argument, first_argument)  # directory + image
+    
+"""Thanks, everyone. May technology serve humanity — and may the world know peace."""
