@@ -16,11 +16,9 @@ Usage:
 import os
 import sys
 from concurrent.futures import ThreadPoolExecutor
-
 import face_recognition
-
 # --- settings ------------------------------------------------------------------
-DETECTION_MODEL = "hog"       # "hog" = fast on CPU, "cnn" = more accurate (GPU helps)
+DETECTION_MODEL = "cnn"       # "hog" = fast on CPU, "cnn" = more accurate (GPU helps)
 FALLBACK_WHOLE_IMAGE = True   # if no face is detected, treat the whole image as one face
 NUM_JITTERS = 1               # 1 = fast, raise it for a more stable embedding (slower)
 QUERY_FACE = "largest"        # which face of a multi-face query image to search with:
@@ -39,12 +37,10 @@ if len(command_arguments) != 2:
 first_argument = command_arguments[0]
 second_argument = command_arguments[1]
 
-
 def box_size(face_box):
     """(top, right, bottom, left) -> pixel area of the face box."""
     top, right, bottom, left = face_box
     return max(0, bottom - top) * max(0, right - left)
-
 
 def find_boxes(image):
     """Face boxes (top, right, bottom, left). A single-face image works either way."""
@@ -53,7 +49,6 @@ def find_boxes(image):
         image_height, image_width = image.shape[0], image.shape[1]
         boxes = [(0, image_width, image_height, 0)]  # whole image as the only face
     return boxes
-
 
 def get_faces(image_path):
     """[ (128-d embedding, face box), ... ] for every face, [] if unreadable.
@@ -74,13 +69,9 @@ def get_faces(image_path):
         if encodings:
             faces.append((encodings[0], face_box))
     return faces
-
-
 def get_distance(first_embedding, second_embedding):
     """Euclidean distance between two embeddings, the smaller the more similar."""
     return float(face_recognition.face_distance([first_embedding], second_embedding)[0])
-
-
 def pick_query_face(faces):
     """One face of the query image: the largest by default, or QUERY_FACE as index."""
     if isinstance(QUERY_FACE, int):
@@ -92,8 +83,6 @@ def pick_query_face(faces):
                                  key=lambda face_index: box_size(faces[face_index][1]))
         return largest_face_index, faces[largest_face_index]
     return 0, faces[0]
-
-
 def collect_images(root_directory):
     """Every image under root_directory, recursively. A single file is returned as is."""
     if os.path.isfile(root_directory):
@@ -104,8 +93,6 @@ def collect_images(root_directory):
             if file_name.lower().endswith(IMAGE_EXTENSIONS):
                 image_paths.append(os.path.join(directory_path, file_name))
     return image_paths
-
-
 def run_compare(first_image_path, second_image_path):
     """Compare two images: every face of the first against every face of the second,
     closest pair first.
@@ -126,8 +113,6 @@ def run_compare(first_image_path, second_image_path):
     for rank, (distance, first_face_index, second_face_index) in enumerate(pairs, 1):
         print("%2d. %.4f  face %d <-> face %d"
               % (rank, distance, first_face_index + 1, second_face_index + 1))
-
-
 def run_search(query_image_path, image_directory):
     """1:N search: rank every image under image_directory against the query image."""
     query_faces = get_faces(query_image_path)
@@ -174,8 +159,6 @@ def run_search(query_image_path, image_directory):
             relative_path = image_path
         print("%2d. %.4f  %s   [face %d/%d]"
               % (rank, distance, relative_path, face_index + 1, face_count))
-
-
 first_is_directory = os.path.isdir(first_argument)
 second_is_directory = os.path.isdir(second_argument)
 if first_is_directory and second_is_directory:
